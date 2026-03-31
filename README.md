@@ -30,7 +30,7 @@ Attach screenshots in a `/proof` folder:
 
 > *Note: Please replace the placeholder paths with your actual screenshots before submission.*
 
-![AI Proof](./proof/gemini-api-code.png)
+![AI Proof](./proof/gemini-api-code.jpeg)
 ![AI Prompt Engineering](./proof/gemini-prompt-logs.png)
 
 ---
@@ -40,9 +40,9 @@ Add project screenshots showcasing the UI and Fact-Checking process:
 
 > *Note: Add your actual screenshots to the `/assets` folder.*
 
-![Dashboard / Chat View](./assets/chat-view.png)  
-![AI Verification Result](./assets/ai-verification.png)
-![Forwarding Modal](./assets/forward-modal.png)
+![Dashboard / Chat View](./assets/1.png)  
+![AI Verification Result](./assets/2.png)
+![Forwarding Modal](./assets/3.png)
 
 ---
 

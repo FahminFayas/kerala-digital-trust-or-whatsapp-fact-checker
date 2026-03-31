@@ -26,18 +26,18 @@ Because these scams are written in regional languages—specifically Malayalam o
 
 Kerala AI Checker is a highly accessible, mobile-first web application designed to act as a digital guardian for the elderly.
 
-An elderly user, or their family member, can simply paste or forward a suspicious message into the chat interface. Under the hood, the app utilizes the **Google Gemini 1.5 Flash API** to contextually analyze the regional linguistic patterns.
+An elderly user, or their family member, can simply paste or forward a suspicious message into the chat interface. Under the hood, the app utilizes the **gemini-2.5-flash API** to perform deep contextual analysis, identifying fraudulent intent, malicious links, and social engineering tactics hidden within regional text.
 
 ### Key Features
 - 🟢🟡🔴 **Visual Trust Score:** A clear Red/Yellow/Green dashboard indicating exactly how safe or dangerous a message is.
-- 🧠 **Native Language Processing:** Built specifically to understand the nuances, slang, and urgency triggers in native Malayalam and Manglish.
+- 🕵️‍♂️ **Advanced Threat Detection:** Built specifically to understand the nuances, slang, and urgency triggers in native Malayalam and Manglish, ensuring culturally localized fraud detection.
 - 📖 **Simplified Explanations:** The AI doesn't just block a message; it explains why it's a scam in simple, respectful, and crystal-clear terms that an elderly person can understand.
 
 ## 👥 The Human Impact: Protecting Kerala's Elderly
 
 Cybersecurity shouldn't just be for the tech-savvy. For an elderly grandparent living alone in Kerala, the internet can be a terrifying minefield of deception. A simple WhatsApp message threatening to cut off their electricity can cause immense stress.
 
-Kerala AI Checker bridges the digital divide. By utilizing powerful Generative AI, we provide vulnerable populations with an instant second opinion. It replaces panic with informed caution, preventing life savings from being drained by malicious actors exploiting regional linguistic blind zones.
+Kerala AI Checker bridges the digital divide. By utilizing powerful Generative AI, we provide vulnerable populations with an instant second opinion. It replaces panic with informed caution, preventing life savings from being drained by malicious actors exploiting regional language and cyber-awareness blind spots.
 
 ## 🛠️ Tech Stack
 
@@ -55,7 +55,7 @@ Kerala AI Checker bridges the digital divide. By utilizing powerful Generative A
 - Tailwind CSS & Framer Motion (for premium UI/UX)
 
 ### How Google AI Was Used
-Google Gemini serves as the core linguistic intelligence engine of Kerala AI Checker. When a user queries a suspicious message, the text payload is securely transmitted to our `/api/analyze` backend via the frontend UI. 
+Google Gemini serves as the core threat-intelligence engine of Kerala AI Checker. When a user queries a suspicious message, the text payload is securely transmitted to our `/api/analyze` backend via the frontend UI. 
 
 We leverage Gemini's advanced multi-lingual and contextual reasoning capabilities to parse complex Malayalam and "Manglish" slang. Gemini performs zero-shot classification to detect psychological manipulation (false urgency, threats, too-good-to-be-true offers) and evaluates links. Gemini then structures the response into a strict JSON format containing a `trust_score`, `verdict`, localized `explanation`, and an array of `red_flags`, which the frontend uses to render the glassmorphic response card dynamically.
 
@@ -70,7 +70,6 @@ Attach screenshots in a `/proof` folder:
 ---
 
 ## Screenshots 
-Add project screenshots showcasing the UI and Fact-Checking process:
 
 ![Dashboard / Chat View](./assets/1.png)  
 ![AI Verification Result](./assets/2.png)
@@ -79,8 +78,10 @@ Add project screenshots showcasing the UI and Fact-Checking process:
 
 ---
 
-## Demo Video
-Upload your demo video to Google Drive and paste the shareable link here (max 3 minutes).
+### 🎥 Live Demo Preview
+
+<video src="./assets/Demo.mp4" controls="controls" width="100%">
+</video>
 [Watch Demo](https://drive.google.com/file/d/1QJx4FjfnDG5u5GbFl9_JC1xWpEoPDZA2/view?usp=drivesdk) 
 
 ---

@@ -81,7 +81,7 @@ Add project screenshots showcasing the UI and Fact-Checking process:
 
 ## Demo Video
 Upload your demo video to Google Drive and paste the shareable link here (max 3 minutes).
-[Watch Demo](https://drive.google.com/file/d/1SbFAQZyyWt60V6IiMvCjoLuCjmiqbFKZ/view?usp=sharing) 
+[Watch Demo](https://drive.google.com/file/d/1QJx4FjfnDG5u5GbFl9_JC1xWpEoPDZA2/view?usp=drivesdk) 
 
 ---
 

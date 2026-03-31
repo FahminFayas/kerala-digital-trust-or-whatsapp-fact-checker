@@ -7,7 +7,7 @@ import {
   Paperclip, Mic, Send, Smile, ShieldCheck, Forward,
   MessageSquare, CircleDashed, Users, Plus, X, Info,
   Archive, Lock, ChevronDown, Check, ShieldAlert, BadgeCheck,
-  UserPlus, Sparkles
+  UserPlus, Sparkles, ArrowLeft
 } from "lucide-react";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
@@ -161,7 +161,7 @@ export default function WhatsAppWebClone() {
     }
   ]);
 
-  const [activeChatId, setActiveChatId] = useState<string>('family');
+  const [activeChatId, setActiveChatId] = useState<string | null>(null);
   const [inputText, setInputText] = useState("");
   const [contextMenuMsgId, setContextMenuMsgId] = useState<string | null>(null);
   const [showForwardModal, setShowForwardModal] = useState<string | null>(null); // State for message being forwarded
@@ -329,7 +329,7 @@ export default function WhatsAppWebClone() {
   return (
     <>
       <style>{scrollbarCSS}</style>
-      <div className={cn("min-h-screen flex text-[15px] font-sans selection:bg-[#00a884]/30", theme.bgApp, theme.textPrimary)}>
+      <div className={cn("h-[100dvh] w-full flex text-[15px] font-sans selection:bg-[#00a884]/30 overflow-hidden", theme.bgApp, theme.textPrimary)}>
 
         {/* --- FORWARDING MODAL (PREMIUM UI) --- */}
         <AnimatePresence>
@@ -399,7 +399,7 @@ export default function WhatsAppWebClone() {
         </AnimatePresence>
 
         {/* --- LEFT SIDEBAR PANEL --- */}
-        <div className={cn("w-[420px] flex flex-col shrink-0 border-r z-20 shadow-xl", theme.border, theme.bgSidebar)}>
+        <div className={cn("w-full md:w-[420px] flex-col shrink-0 border-r z-20 shadow-xl", theme.border, theme.bgSidebar, activeChatId ? "hidden md:flex" : "flex")}>
           <div className={cn("h-[64px] px-4 flex items-center justify-between shrink-0", theme.bgHeader)}>
             <div className="w-[42px] h-[42px] rounded-full bg-[#182229] flex items-center justify-center shrink-0 border border-white/5 cursor-pointer hover:bg-[#202c33] transition">
               <span className="text-sm font-bold text-[#aebac1]">Me</span>
@@ -491,12 +491,15 @@ export default function WhatsAppWebClone() {
         </div>
 
         {/* --- RIGHT PANE (ACTIVE CHAT CONTEXT) --- */}
-        <div className={cn("flex-1 flex flex-col h-full bg-[#0b141a] z-10 basis-auto overflow-hidden")}>
+        <div className={cn("flex-1 flex-col h-full bg-[#0b141a] z-10 basis-auto overflow-hidden", !activeChatId ? "hidden md:flex" : "flex")}>
           <AnimatePresence mode="wait">
             {activeChat ? (
               <motion.div key={activeChat.id} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.15 }} className="flex flex-col w-full h-full relative z-0">
                 <header className={cn("h-[64px] px-4 flex items-center justify-between shrink-0 z-20 shadow-sm border-l border-white/5", theme.bgHeader)}>
-                  <div className="flex items-center gap-4 cursor-pointer group">
+                  <div className="flex items-center gap-3 cursor-pointer group">
+                    <button onClick={() => setActiveChatId(null)} className="md:hidden p-1.5 -ml-2 rounded-full hover:bg-white/10 text-white/70 transition-colors">
+                      <ArrowLeft className="w-6 h-6" />
+                    </button>
                     <div className={cn("w-[42px] h-[42px] rounded-full flex items-center justify-center shrink-0 shadow-sm relative", activeChat.type === 'bot' ? "bg-gradient-to-br from-[#00a884] to-[#018e6f]" : "bg-[#233138]")}>
                       {activeChat.type === 'bot' && (
                         <motion.div

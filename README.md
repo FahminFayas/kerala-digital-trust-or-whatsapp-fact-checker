@@ -1,7 +1,7 @@
 <div align="center">
   <h1>🛡️ Kerala AI Checker</h1>
   <h3>Kerala Digital Trust Fact-Checker</h3>
-  <p><i>Winner / Submission for <b>Google 'Build with AI 2026' at MESCE</b></i></p>
+  <p><i>Submission for <b>Google 'Build with AI 2026' at MESCE</b></i></p>
   <p><b>Theme:</b> AI for Cybersecurity & Digital Trust</p>
   <br />
   <a href="https://kerala-digital-trust-73820029707.asia-south1.run.app/"><strong>🔗 Live Demo</strong></a>
